@@ -1,0 +1,3 @@
+Model,Test Accuracy,Training Time (seconds)
+Logistic Regression,0.8431,88.73
+CNN,0.9072999954223633,359.15855956077576
