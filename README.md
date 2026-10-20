@@ -1,74 +1,61 @@
 # Fashion-MNIST Image Classification
 
-A deep learning project for classifying clothing images from the Fashion-MNIST dataset using **Logistic Regression** and a **Convolutional Neural Network (CNN)**.  
-The project covers **data exploration, preprocessing, model training, evaluation, and performance comparison**.
+A deep learning project that classifies clothing images from the Fashion-MNIST dataset using Logistic Regression and a Convolutional Neural Network (CNN). The project covers data exploration, preprocessing, model training, evaluation, and performance comparison.
 
 ## Project Overview
 
-Fashion-MNIST is a dataset of **70,000 grayscale clothing images** across **10 categories**, where each image has a resolution of **28 × 28 pixels**.
+Fashion-MNIST contains 70,000 grayscale clothing images across 10 categories, with each image measuring 28 × 28 pixels.
 
 - **Training set:** 60,000 images
 - **Test set:** 10,000 images
 - **Number of classes:** 10
 
-## Dataset Classes
-
-The dataset includes the following classes:
-
-- T-shirt/top
-- Trouser
-- Pullover
-- Dress
-- Coat
-- Sandal
-- Shirt
-- Sneaker
-- Bag
-- Ankle boot
-
 ## Models
 
 ### Logistic Regression
-A baseline machine learning model used for comparison.
 
-- Images were flattened into **784 features**
-- **Test Accuracy:** 84.31%
-- **Training Time:** 88.73 seconds
+A baseline machine learning model used to classify flattened image data.
+
+- **Input features:** 784 per image
+- **Test accuracy:** 84.31%
+- **Training time:** 88.73 seconds
 
 ### Convolutional Neural Network (CNN)
-A deep learning model designed to capture image patterns more effectively.
 
-- Includes convolution, max pooling, dense, and dropout layers
-- **Test Accuracy:** 90.73%
-- **Training Time:** 359.16 seconds
+A deep learning model that uses convolutional and pooling layers to learn visual patterns in clothing images.
+
+- **Architecture:** Convolutional, max pooling, dense, and dropout layers
+- **Test accuracy:** 90.73%
+- **Training time:** 359.16 seconds
 
 ## Results
 
 | Model | Test Accuracy | Training Time |
-|------|---------------|---------------|
+|---|---:|---:|
 | Logistic Regression | 84.31% | 88.73 seconds |
 | CNN | 90.73% | 359.16 seconds |
 
-The CNN achieved higher classification accuracy than Logistic Regression, showing stronger performance on image classification tasks, although it required more training time.
+The CNN improved test accuracy by **6.42 percentage points** compared with Logistic Regression, although it required more training time.
 
 ## Model Comparison
+
+The following chart compares the test accuracy and training time of both models.
 
 ![Model Comparison](model_comparison.png)
 
 ## CNN Confusion Matrix
 
-The confusion matrix shows the CNN's classification performance across the 10 Fashion-MNIST classes.  
-Correct predictions appear along the diagonal, while off-diagonal values show misclassifications.
+The confusion matrix shows the CNN's classification performance across all 10 clothing categories. Values along the diagonal represent correct predictions, while off-diagonal values indicate misclassified images.
 
 ![CNN Confusion Matrix](cnn-confusion-matrix.png)
 
-The model performed especially well on **Trouser, Sandal, Bag, and Sneaker**, while **Shirt** was the most challenging class and was sometimes confused with visually similar categories such as **T-shirt/top, Pullover, and Coat**.
+The CNN performed particularly well on Trousers, Sandals, Bags, and Sneakers. Shirts were more challenging to classify, with errors involving visually similar clothing categories.
 
 ## Key Findings
 
-- CNN outperformed Logistic Regression in test accuracy.
-- Visually similar clothing categories were harder to classify.
-- **Shirt** was the most difficult class for the CNN.
+- CNN achieved higher test accuracy than Logistic Regression.
+- Visually similar clothing categories were more difficult to distinguish.
+- Shirt was the most challenging class for the CNN.
 - The confusion matrix helped identify common classification errors.
 
 ## Technologies Used
@@ -76,43 +63,44 @@ The model performed especially well on **Trouser, Sandal, Bag, and Sneaker**, wh
 - Python
 - TensorFlow / Keras
 - Scikit-learn
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
+- NumPy and Pandas
+- Matplotlib and Seaborn
 - Google Colab
 
 ## Repository Contents
 
-- `fashion_mnist_deep_learning.ipynb` — Main notebook containing preprocessing, training, and evaluation
-- `fashion_mnist_cnn.keras` — Saved trained CNN model
-- `model_comparison.csv` — Model performance results
-- `model_comparison.png` — Accuracy and training time comparison chart
-- `cnn-confusion-matrix.png` — CNN confusion matrix
-- `class_names.json` — Class labels used in the project
+- `fashion_mnist_deep_learning.ipynb` — Notebook containing data exploration, preprocessing, model training, and evaluation.
+- `fashion_mnist_cnn.keras` — Saved trained CNN model.
+- `model_comparison.csv` — Model performance and training-time results.
+- `model_comparison.png` — Visual comparison of model performance.
+- `cnn-confusion-matrix.png` — CNN classification confusion matrix.
+- `class_names.json` — Clothing class labels.
 
-## Google Colab Notebook
+## Explore the Notebook
 
-You can explore the full notebook here:
+Explore the complete workflow, code, and results in Google Colab.
 
-[Open in Google Colab](https://colab.research.google.com/drive/1UOb0S2dyF9T_mSoJr1vCIsCbMDonoXyN?usp=sharing)
+[Open Fashion-MNIST Notebook](https://colab.research.google.com/drive/1UOb0S2dyF9T_mSoJr1vCIsCbMDonoXyN?usp=sharing)
 
 ## How to Explore
 
 1. Open the notebook in Google Colab.
-2. Review the data exploration and preprocessing steps.
-3. Compare the Logistic Regression and CNN models.
-4. Check the saved model results and visualizations.
-5. Use the confusion matrix and comparison chart to understand model performance.
+2. Review the dataset exploration and preprocessing steps.
+3. Examine the Logistic Regression and CNN training processes.
+4. Compare model accuracy and training time.
+5. Review the confusion matrix to understand classification errors.
 
 ## Future Improvements
 
-- Improve classification of visually similar clothing classes
-- Experiment with deeper CNN architectures
-- Tune hyperparameters for better performance
-- Add prediction on custom images
-- Build a simple interface for testing the trained model
+- Improve classification of visually similar clothing categories.
+- Experiment with CNN architectures and hyperparameters.
+- Evaluate additional classification metrics.
+- Develop a simple interface for predicting clothing categories from images.
 
-## Author
+## Project Information
 
-Developed as part of a deep learning and image classification project using the Fashion-MNIST dataset.
+- **Project:** Fashion-MNIST Image Classification
+- **Category:** Machine Learning and Deep Learning
+- **Task:** Multiclass Image Classification
+- **Environment:** Google Colab
+
